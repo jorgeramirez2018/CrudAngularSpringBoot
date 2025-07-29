@@ -33,7 +33,7 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
-              "entry": "src/server.ts"
+            
             }
           },
           "configurations": {
@@ -97,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "19751113-0179-4f6d-8551-6131449e6f23"
   }
 }

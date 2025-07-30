@@ -1,0 +1,39 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Formulario de Usuario</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <form #userForm="ngForm"> <!-- Aquí puedes conectar tu lógica Angular -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                        <input type="text" [(ngModel)]="nombre" class="form-control" id="nombre" name="nombre"  required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                        <input type="text" [(ngModel)]="apellido" class="form-control" id="apellido" name="apellido"  required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Edad</label>
+                        <input type="number" [(ngModel)]="edad"  class="form-control" id="edad" name="edad"  required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" [(ngModel)]="email"  class="form-control" id="email" name="email"  required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" (click)="addCustomer()">Enviar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

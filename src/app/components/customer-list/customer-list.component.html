@@ -1,7 +1,33 @@
-<h2>Listado De Usuarios</h2>
 
-<ul>
-    <li *ngFor="let c of customers">
-        {{c.id}} - {{c.nombre}} - {{c.apellido}} - {{c.edad}} - {{c.email}}
-    </li>
-</ul>
+
+<div class="text-center mb-5 mt-5"><h2>Listado De Usuarios</h2></div>
+
+<div class="container">
+
+    <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Agregar Usuario
+    </button>
+    
+<table class="table" >
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">APELLIDO</th>
+            <th scope="col">EDAD</th>
+            <th scope="col">EMAIL</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let c of customers">
+        <tr>
+            <td>{{c.id}}</td>
+            <td>{{c.nombre}}</td>
+            <td>{{c.apellido}}</td>
+            <td>{{c.edad}}</td>
+            <td>{{c.email}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>

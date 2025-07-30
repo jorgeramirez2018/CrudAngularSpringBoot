@@ -9,9 +9,15 @@ import { Customer } from '../customer';
 export class CustomerService {
   private api: string = 'http://localhost:8080/usuarios';
 
+
   constructor(private http: HttpClient) {}
 
   getCustomersList(): Observable<Customer[]> {
     return this.http.get<Customer[]>(`${this.api}`);
+  }
+
+  createCustomer(customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(`${this.api}/guardar`, customer);
+
   }
 }

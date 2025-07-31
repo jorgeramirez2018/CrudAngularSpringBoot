@@ -4,12 +4,13 @@ import { Customer } from '../../customer';
 import { CustomerService } from '../../services/customer.service';
 
 @Component({
-  selector: 'app-customer-list',// obligatorio en standalone
-  imports: [CommonModule], // 
+  selector: 'app-customer-list', // obligatorio en standalone
+  imports: [CommonModule], //
   templateUrl: './customer-list.component.html',
   styleUrls: ['./customer-list.component.css'],
 })
 export class CustomerListComponent implements OnInit {
+
   customers: Customer[] = [];
 
   constructor(private customerService: CustomerService) {}
@@ -17,8 +18,6 @@ export class CustomerListComponent implements OnInit {
   ngOnInit(): void {
     this.listCustomers();
   }
-
-  
 
   listCustomers() {
     this.customerService.getCustomersList().subscribe(
@@ -31,4 +30,6 @@ export class CustomerListComponent implements OnInit {
       }
     );
   }
+
+
 }

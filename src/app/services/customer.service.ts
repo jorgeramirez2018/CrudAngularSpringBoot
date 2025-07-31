@@ -7,6 +7,7 @@ import { Customer } from '../customer';
   providedIn: 'root',
 })
 export class CustomerService {
+  [x: string]: any;
   private api: string = 'http://localhost:8080/usuarios';
 
 
@@ -20,4 +21,6 @@ export class CustomerService {
     return this.http.post<Customer>(`${this.api}/guardar`, customer);
 
   }
+
+  
 }
